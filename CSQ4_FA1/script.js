@@ -12,25 +12,33 @@ function resetdata() {
     document.getElementById("interests").style.border = "1px solid black";
     document.getElementById("body").style.overflow = "hidden";
     document.getElementById("background").style.height = "100vh";
+}
 
-    document.getElementById("data").innerHTML =
-        "Name: " + Name + br +
-        "Username: " + username + br +
-        "Gender: " + gender + br +
-        "Password: " + password + br +
-        "Email: " + email + br +
-        "Address: " + address + br +
-        "About the User: " + interests + br;
+function display() {
+    var br = "</br>";
+    document.getElementById("userData").innerHTML =
+        "Name: " + document.getElementById("name").value + br +
+        "Username: " + document.getElementById("username").value + br +
+        "Gender: " + document.getElementById("gender").value + br +
+        "Password: " + document.getElementById("password").value + br +
+        "Email: " + document.getElementById("email").value + br +
+        "Address: " + document.getElementById("address").value + br +
+        "About the User: " + document.getElementById("interests").value + br;
 }
 
 function blurR(inputElement) {
     if (inputElement.value === "") {
-        inputElement.style.border = "3px solid red";
+        inputElement.style.border = "1px solid red";
     } else {
-        inputElement.style.border = "4px solid #00FF7F";
+        inputElement.style.border = "1px solid #00FF7F";
     }
 }
 
 function focusG(inputElement) {
-    inputElement.style.border = "4px solid #00FF7F";
+    inputElement.style.border = "1px solid #00FF7F";
+}
+
+function data() {
+    display();
+    return false; 
 }
